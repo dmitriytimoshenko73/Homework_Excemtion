@@ -2,7 +2,8 @@
 каждый элемент которого равен разности элементов двух входящих массивов в той же ячейке. Если длины массивов 
 не равны, необходимо как-то оповестить пользователя. */
 
-public static int[] SubtractArrays(int[] arr1, int[] arr2)
+ int[] SubtractArrays(int[] arr1, int[] arr2)
+
 {
     if (arr1.Length != arr2.Length)
     {
@@ -17,4 +18,17 @@ public static int[] SubtractArrays(int[] arr1, int[] arr2)
     }
 
     return result;
+}
+
+int[] arr1 = { 1, 2, 5 };
+int[] arr2 = { 4, 5, 6 };
+
+int[] result = SubtractArrays(arr1, arr2);
+
+if (result != null)
+{
+    foreach (int num in result)
+    {
+        Console.Write(string.Join(" , " , num));
+    }
 }
